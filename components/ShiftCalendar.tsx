@@ -4,9 +4,10 @@ import { useEffect, useState } from 'react'
 import { supabase } from '@/lib/supabase'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
-import '@fullcalendar/common/main.css'
-import '@fullcalendar/daygrid/main.css'
 
+// ✅ Correct FullCalendar CSS imports
+import '@fullcalendar/core/index.css'
+import '@fullcalendar/daygrid/index.css'
 
 type ShiftEvent = {
   title: string
