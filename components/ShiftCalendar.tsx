@@ -1,10 +1,11 @@
 'use client'
+
 import { useEffect, useState } from 'react'
 import { supabase } from '@/lib/supabase'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
-import '@fullcalendar/common/main.css'
-import '@fullcalendar/daygrid/main.css'
+import '@fullcalendar/core/index.css'
+import '@fullcalendar/daygrid/index.css'
 
 type ShiftEvent = {
   title: string
@@ -18,7 +19,7 @@ export default function ShiftCalendar() {
     const fetchShifts = async () => {
       const { data } = await supabase.from('shifts').select('*')
       if (data) {
-        const mapped = data.map(shift => ({
+        const mapped = data.map((shift: any) => ({
           title: `${shift.employee_email} - ${shift.shift_type}`,
           date: shift.shift_date,
         }))
