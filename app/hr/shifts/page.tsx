@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '@/lib/supabase'
 import DashboardLayout from '@/components/DashboardLayout'
-import ShiftCalendar from '@/components/ShiftCalendar'
 
 type Shift = {
   id: string
@@ -86,7 +85,6 @@ export default function HRShiftManagement() {
       </div>
 
       {/* Calendar View */}
-      <ShiftCalendar />
     </DashboardLayout>
   )
 }
