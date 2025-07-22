@@ -9,8 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fullcalendar/common": "^5.11.5",
     "@fullcalendar/daygrid": "^6.1.18",
+    "@fullcalendar/list": "^6.1.18",
     "@fullcalendar/react": "^6.1.18",
+    "@fullcalendar/timegrid": "^6.1.18",
     "@supabase/supabase-js": "^2.52.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
